@@ -55,9 +55,13 @@ Wumpus
 Features
 
 >Game is played over a network, with each player communicating with a central server
+
 >Turn based, server outputs whose turn it is
+
 >20 possible rooms
+
 >Wumpus has two senses - can smell the player and can hear the clatter of an arrow that misses
+
 >Wumpus has just one action - move in some direction to an adjacent room
 
 
