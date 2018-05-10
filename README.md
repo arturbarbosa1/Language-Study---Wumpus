@@ -17,7 +17,9 @@ The first client will play as the hunter while the second client will play as th
 Objects:
 
 >Wumpus: A beast that eats the hunter if in the same room.
+
 >Bats: creatures that instantly carry you to a random room.
+
 >Pits (2): fatal to you if you enter the room.
 
 Actions:
@@ -26,19 +28,23 @@ There are two possible actions
 
 >Move
 >>to one of the three rooms connected to your current one.
+
 >>Example Command: move 11
 
 >Shoot
 >>fire a "crooked arrow" a distance of 1-5 rooms; you must name each room it will reach.
+
 >>Example Command: shoot 1 2 3 4 5
 
 
 Hunter                        
 
 >Warning messages: Give you information about the contents of adjacent rooms.
->>Wumpus: "I smell a wumpus"
->>Bat: "Bats nearby"
->>Pit: "I feel a draft"
+>>Wumpus near: "I smell a wumpus"
+
+>>Bat near: "Bats nearby"
+
+>>Pit near: "I feel a draft"
 
 Wumpus
 
@@ -47,6 +53,7 @@ Wumpus
 
 
 Features
+
 >Game is played over a network, with each player communicating with a central server
 >Turn based, server outputs whose turn it is
 >20 possible rooms
