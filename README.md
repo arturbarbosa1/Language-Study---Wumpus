@@ -53,5 +53,5 @@ Features
 GAMEPLAY 
 
 Hunter: 
-![alt text](https://raw.githubusercontent.com/arturbarbosa1/Wumpus/huntergameplay.png)
 
+![alt text](https://raw.githubusercontent.com/username/Wumpus/edit/master/to/huntergameplay.png)
