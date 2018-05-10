@@ -8,8 +8,8 @@ CLI COMMANDS
 1) cd filepath
 2. Compile code //stack build
 3. //stack exec wumpus-server
-4. //stack exec wumpus-client
-5. //stack exec wumpus-client
+4. //stack exec wumpus-client (localhost)
+5. //stack exec wumpus-client (localhost)
 6. enjoy the game
 
 The first client will play as the hunter while the second client will play as the wumpus. 
