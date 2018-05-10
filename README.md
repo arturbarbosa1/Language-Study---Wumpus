@@ -54,4 +54,4 @@ GAMEPLAY
 
 Hunter: 
 
-![alt text](https://imgur.com/a/No2rzPf)
+![alt text](<blockquote class="imgur-embed-pub" lang="en" data-id="a/No2rzPf"><a href="//imgur.com/No2rzPf"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
