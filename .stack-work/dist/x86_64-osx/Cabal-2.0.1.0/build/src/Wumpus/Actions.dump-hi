@@ -1,0 +1,425 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-10 00:09:42.212953 UTC
+
+interface wumpus-0.1.0.0-JL1VcuBzN1B2D5EWBauRGW:Wumpus.Actions 8022
+  interface hash: 5a09845f320abdf231610a42578415b1
+  ABI hash: ea9e7e2433f40898ce8650dcc17d2f87
+  export-list hash: 2ad6bdd6496d4ddfda9e338eff9d5dc3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4ca8365a55cf4cf9a65dd61ebc902736
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Wumpus.Actions.execPlayerCmd
+  Wumpus.Actions.execWumpusCmd
+  Wumpus.Actions.parsePlayerCmd
+  Wumpus.Actions.parseWumpusCmd
+  Wumpus.Actions.CMD{Wumpus.Actions.Move Wumpus.Actions.Shoot Wumpus.Actions.Sleep}
+module dependencies: Wumpus.Grid Wumpus.Utils
+package dependencies: array-0.5.2.0 base-4.10.1.0 binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.10.2 deepseq-1.4.3.0
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 network-2.6.3.5 random-1.1
+                      string-conversions-0.4.0.1 text-1.2.3.0 time-1.8.0.2
+                      utf8-string-1.0.1.1
+orphans: text-1.2.3.0:Data.Text.Lazy text-1.2.3.0:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show network-2.6.3.5:Network.Socket
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+import  -/  base-4.10.1.0:Data.Char fe4e3458190deeac19969ce15e33bed9
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:Data.OldList 555420b092ca8cf0a8f9666bc0e07dcf
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Unicode 49c9de4fffed0d9be65aaeb6a60b757c
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:Text.Read 9e862e012b3c71e83cb56fb456188f44
+import  -/  bytestring-0.10.8.2:Data.ByteString 0dbe3ec0b37e10f515b8722c5188101f
+import  -/  bytestring-0.10.8.2:Data.ByteString.Internal dcff77f8f80fa9d798036ed295d3d755
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  random-1.1:System.Random c9dfbade5c0e5bc4ae42c058f948952b
+import  -/  string-conversions-0.4.0.1:Data.String.Conversions 866b6dd42e010f15034999768530c2d0
+import  -/  Wumpus.Grid bbdbd938802d9288045fba6edfd0fc6d
+  exports: 23052b8f3f37f97d30d99abaaea25a20
+  Bat 3efc83e9940d82b2c3b6926594817438
+  Game af39ec203e664972c0cf69039c6833f1
+  Game 7a3b98b3e8db93656d3ef085d9ff8e27
+  Pit c499b11e7917b58ac2a2dc38a753c3c1
+  arrowSemaphore 7a3b98b3e8db93656d3ef085d9ff8e27
+  arrows 7a3b98b3e8db93656d3ef085d9ff8e27
+  bats 7a3b98b3e8db93656d3ef085d9ff8e27
+  grid 7a3b98b3e8db93656d3ef085d9ff8e27
+  pits 7a3b98b3e8db93656d3ef085d9ff8e27
+  player 7a3b98b3e8db93656d3ef085d9ff8e27
+  playerWins 7a3b98b3e8db93656d3ef085d9ff8e27
+  wumpus 7a3b98b3e8db93656d3ef085d9ff8e27
+  wumpusWins 7a3b98b3e8db93656d3ef085d9ff8e27
+import  -/  Wumpus.Utils 5f9edd142f71e65acfabcb1f510b1359
+  exports: d4bb8bd31bc073e551adff0dcb9f9f59
+  closeEnough e791407ed03a43f5da77e4dc4e0e7f66
+44ccb66552025f38d6308dcda38e6146
+  $tc'Move :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11497951069361506886##
+                   12710710183152799293##
+                   Wumpus.Actions.$trModule
+                   Wumpus.Actions.$tc'Move2
+                   0#
+                   Wumpus.Actions.$tc'Move1) -}
+65affe064fb1a8b055ae6783271277e7
+  $tc'Move1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+a85f76a96d96865c34a5095cb48971c3
+  $tc'Move2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Actions.$tc'Move3) -}
+f7f29ce15a89d2defe48d314be6851f0
+  $tc'Move3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Move"#) -}
+df68a861b9b5de8aacc2f414d8aa85da
+  $tc'Shoot :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6016114137655807311##
+                   7750933577809498449##
+                   Wumpus.Actions.$trModule
+                   Wumpus.Actions.$tc'Shoot2
+                   0#
+                   Wumpus.Actions.$tc'Shoot1) -}
+b1defc5c5c5e1883ad86858483baa957
+  $tc'Shoot1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+299ceb23214ab3c4b7e93b90ef03eaa8
+  $tc'Shoot2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Actions.$tc'Shoot3) -}
+de437e5ffb529d49a04169e11af99eb7
+  $tc'Shoot3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Shoot"#) -}
+ad855c917c71f25d6a991bc0aaaf1dc3
+  $tc'Sleep :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5033998129353219195##
+                   305505287294599262##
+                   Wumpus.Actions.$trModule
+                   Wumpus.Actions.$tc'Sleep2
+                   0#
+                   Wumpus.Actions.$tc'Sleep1) -}
+cbe34af6a50c1487d5e531e5f2ffd0db
+  $tc'Sleep1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+bf5f5bbeae1a25fbada440813bf205ab
+  $tc'Sleep2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Actions.$tc'Sleep3) -}
+7b28631d99e1e994bfdb185032cc0851
+  $tc'Sleep3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Sleep"#) -}
+0976419a14faaf7ce5583b58fee9896b
+  $tcCMD :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14403542432797573569##
+                   13702187098822726758##
+                   Wumpus.Actions.$trModule
+                   Wumpus.Actions.$tcCMD1
+                   0#
+                   GHC.Types.krep$*) -}
+06a918937c5b15e13ce75defb73203f2
+  $tcCMD1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Actions.$tcCMD2) -}
+63fd96c49058becd5e43baf8b43fcd40
+  $tcCMD2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CMD"#) -}
+357fd09fffb3414805fcbc2193e3ac00
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Wumpus.Actions.$trModule3
+                   Wumpus.Actions.$trModule1) -}
+d0955c018190af8edffd5bd19ad332e0
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Actions.$trModule2) -}
+c196e56625474444bcc2f83d45e86960
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Wumpus.Actions"#) -}
+7c2ccbdf8ad90a5816676505306c99b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Actions.$trModule4) -}
+ceec4177043e4d9f4e40efab5b97962e
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("wumpus-0.1.0.0-JL1VcuBzN1B2D5EWBauRGW"#) -}
+8640b0f317fd0837d06b302c748db8d6
+  $wparsePlayerCmd ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Wumpus.Actions.CMD
+  {- Arity: 4, Strictness: <S,U><L,U><S,U><S,U>, Inline: [0] -}
+033222a80dcc128e7806b3777e8107fd
+  $wparseWumpusCmd ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Wumpus.Actions.CMD
+  {- Arity: 4, Strictness: <S,U><L,U><S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Addr#)
+                   (ww1 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#) ->
+                 case Data.OldList.words
+                        (Data.ByteString.UTF8.$wfoldr
+                           @ [GHC.Types.Char]
+                           (GHC.Types.: @ GHC.Types.Char)
+                           (GHC.Types.[] @ GHC.Types.Char)
+                           ww
+                           ww1
+                           ww2
+                           ww3) of wild {
+                   [] -> Wumpus.Actions.Sleep
+                   : ds ds1
+                   -> case GHC.Base.eqString
+                             ds
+                             Wumpus.Actions.parseWumpusCmd6 of wild1 {
+                        GHC.Types.False
+                        -> case GHC.Base.eqString
+                                  ds
+                                  Wumpus.Actions.parseWumpusCmd4 of wild2 {
+                             GHC.Types.False -> Wumpus.Actions.Sleep
+                             GHC.Types.True
+                             -> case ds1 of wild3 { DEFAULT -> Wumpus.Actions.Sleep } }
+                        GHC.Types.True
+                        -> case ds1 of wild2 {
+                             []
+                             -> case GHC.Base.eqString
+                                       ds
+                                       Wumpus.Actions.parseWumpusCmd4 of wild3 { DEFAULT ->
+                                Wumpus.Actions.Sleep }
+                             : arg ds2
+                             -> case ds2 of wild3 {
+                                  []
+                                  -> let {
+                                       $j :: Wumpus.Actions.CMD <join 0>
+                                       = Wumpus.Actions.Move
+                                           (case Text.Read.readEither8
+                                                   @ GHC.Types.Int
+                                                   (Text.ParserCombinators.ReadP.run
+                                                      @ GHC.Types.Int
+                                                      Wumpus.Actions.parseWumpusCmd3
+                                                      arg) of wild4 {
+                                              [] -> Wumpus.Actions.parseWumpusCmd2
+                                              : x ds3
+                                              -> case ds3 of wild5 {
+                                                   [] -> x
+                                                   : ipv ipv1 -> Wumpus.Actions.parseWumpusCmd1 } })
+                                     } in
+                                     letrec {
+                                       go :: [GHC.Types.Char] -> Wumpus.Actions.CMD
+                                         <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                                       = \ (ds3 :: [GHC.Types.Char]) ->
+                                         case ds3 of wild4 {
+                                           [] -> $j
+                                           : y ys
+                                           -> case y of wild5 { GHC.Types.C# c# ->
+                                              case GHC.Prim.tagToEnum#
+                                                     @ GHC.Types.Bool
+                                                     (GHC.Prim.leWord#
+                                                        (GHC.Prim.int2Word#
+                                                           (GHC.Prim.-# (GHC.Prim.ord# c#) 48#))
+                                                        9##) of wild6 {
+                                                GHC.Types.False -> Wumpus.Actions.Sleep
+                                                GHC.Types.True -> go ys } } }
+                                     } in
+                                     go arg
+                                  : ipv ipv1
+                                  -> case GHC.Base.eqString
+                                            ds
+                                            Wumpus.Actions.parseWumpusCmd4 of wild4 { DEFAULT ->
+                                     Wumpus.Actions.Sleep } } } } }) -}
+f0fe25c351899f6c6ad242875718688d
+  data CMD
+    = Sleep
+    | Move GHC.Types.Int
+    | Shoot GHC.Types.Int
+            GHC.Types.Int
+            GHC.Types.Int
+            GHC.Types.Int
+            GHC.Types.Int
+120b358b76d4db33c32e3950c2b4e9de
+  execPlayerCmd ::
+    Wumpus.Actions.CMD
+    -> Wumpus.Grid.Game -> GHC.Types.IO Wumpus.Grid.Game
+  {- Arity: 3,
+     Strictness: <S,1*U><L,1*U(U,U(U(U),U(U)),U(U(U),U(U)),U(U),U(U),U(U),A,U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Actions.execPlayerCmd1
+                  `cast`
+                (<Wumpus.Actions.CMD>_R
+                 ->_R <Wumpus.Grid.Game>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Wumpus.Grid.Game>_R)) -}
+0b37d3fa604a75998ac7307241277443
+  execPlayerCmd1 ::
+    Wumpus.Actions.CMD
+    -> Wumpus.Grid.Game
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Wumpus.Grid.Game #)
+  {- Arity: 3,
+     Strictness: <S,1*U><L,1*U(U,U(U(U),U(U)),U(U(U),U(U)),U(U),U(U),U(U),A,U,U)><S,U> -}
+96e0fd4659a44b6d47594b810de194a6
+  execWumpusCmd ::
+    Wumpus.Actions.CMD -> Wumpus.Grid.Game -> Wumpus.Grid.Game
+  {- Arity: 2, Strictness: <S,1*U><S,1*U(U,U,U,U(U),U(U),U,U,U,U)>m,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Wumpus.Actions.CMD) (w1 :: Wumpus.Grid.Game) ->
+                 case w1 of ww { Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 case w of wild {
+                   DEFAULT -> Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9
+                   Wumpus.Actions.Move room
+                   -> case ww4 of wild1 { GHC.Types.I# x ->
+                      case room of ww10 { GHC.Types.I# ww11 ->
+                      case GHC.List.$w!!
+                             @ Wumpus.Grid.Room
+                             ww1
+                             (GHC.Prim.-# x 1#) of ww12 { Wumpus.Grid.Room ww13 ww14 ww15 ->
+                      case ww13 of ww16 { GHC.Types.I# ww17 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# ww11 ww17) of wild2 {
+                        GHC.Types.False
+                        -> case ww14 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# ww11 y) of wild4 {
+                             GHC.Types.False
+                             -> case ww15 of wild5 { GHC.Types.I# y1 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.==# ww11 y1) of wild6 {
+                                  GHC.Types.False
+                                  -> Wumpus.Grid.Game ww1 ww2 ww3 wild1 ww5 ww6 ww7 ww8 ww9
+                                  GHC.Types.True
+                                  -> Wumpus.Grid.Game
+                                       ww1
+                                       ww2
+                                       ww3
+                                       ww10
+                                       ww5
+                                       ww6
+                                       ww7
+                                       ww8
+                                       (case ww5 of wild7 { GHC.Types.I# y2 ->
+                                        GHC.Prim.tagToEnum#
+                                          @ GHC.Types.Bool
+                                          (GHC.Prim.==# ww11 y2) }) } }
+                             GHC.Types.True
+                             -> Wumpus.Grid.Game
+                                  ww1
+                                  ww2
+                                  ww3
+                                  ww10
+                                  ww5
+                                  ww6
+                                  ww7
+                                  ww8
+                                  (case ww5 of wild5 { GHC.Types.I# y1 ->
+                                   GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.==# ww11 y1) }) } }
+                        GHC.Types.True
+                        -> Wumpus.Grid.Game
+                             ww1
+                             ww2
+                             ww3
+                             ww10
+                             ww5
+                             ww6
+                             ww7
+                             ww8
+                             (case ww5 of wild3 { GHC.Types.I# y ->
+                              GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.==# ww11 y) }) } } } } } } }) -}
+c2dfa8ccaf6d775a794898a9170ba353
+  parsePlayerCmd ::
+    Data.ByteString.Internal.ByteString -> Wumpus.Actions.CMD
+  {- Arity: 1, Strictness: <S(SLSS),1*U(U,U,U,U)>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Data.ByteString.Internal.ByteString) ->
+                 case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 Wumpus.Actions.$wparsePlayerCmd ww1 ww2 ww3 ww4 }) -}
+89a4c79aa0ba2b4d098a2ec09fa64c53
+  parseWumpusCmd ::
+    Data.ByteString.Internal.ByteString -> Wumpus.Actions.CMD
+  {- Arity: 1, Strictness: <S(SLSS),1*U(U,U,U,U)>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Data.ByteString.Internal.ByteString) ->
+                 case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 Wumpus.Actions.$wparseWumpusCmd ww1 ww2 ww3 ww4 }) -}
+9c93ab5e52952570906b52fc434db28b
+  parseWumpusCmd1 :: GHC.Types.Int
+  {- Strictness: x -}
+6ee0f61eb4e52bfc6aef12e6f8cbe028
+  parseWumpusCmd2 :: GHC.Types.Int
+  {- Strictness: x -}
+dfb60c623e96eb533486df4d3b0968c0
+  parseWumpusCmd3 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: (GHC.Read.$fReadInt_$sreadNumber
+                   GHC.Read.$fReadInt2
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Types.Int
+                   (Text.Read.readEither7 @ GHC.Types.Int)) -}
+28fa6f03822a79f41958f75fd13b35fc
+  parseWumpusCmd4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Wumpus.Actions.parseWumpusCmd5) -}
+b05ebe8dee8074727ab9116b2f2cfd5d
+  parseWumpusCmd5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("sleep"#) -}
+77e1101a5151f95f2b19af61703fbe7c
+  parseWumpusCmd6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Wumpus.Actions.parseWumpusCmd7) -}
+55d97dd8488fa59a80a8189ad9261d8a
+  parseWumpusCmd7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("move"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

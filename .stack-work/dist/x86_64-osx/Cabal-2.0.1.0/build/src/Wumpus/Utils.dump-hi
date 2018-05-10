@@ -1,0 +1,736 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-10 00:09:41.982881 UTC
+
+interface wumpus-0.1.0.0-JL1VcuBzN1B2D5EWBauRGW:Wumpus.Utils 8022
+  interface hash: 4097409f9642bedbb681bcfe9f91fa72
+  ABI hash: 5f9edd142f71e65acfabcb1f510b1359
+  export-list hash: d4bb8bd31bc073e551adff0dcb9f9f59
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8b8789b4f1ea963338d4780545fff279
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Wumpus.Utils.checkArrow
+  Wumpus.Utils.checkBats
+  Wumpus.Utils.checkPits
+  Wumpus.Utils.checkPlayer
+  Wumpus.Utils.checkWumpus
+  Wumpus.Utils.closeEnough
+  Wumpus.Utils.pp
+module dependencies: Wumpus.Grid
+package dependencies: array-0.5.2.0 base-4.10.1.0 binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.10.2 deepseq-1.4.3.0
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 network-2.6.3.5 random-1.1
+                      string-conversions-0.4.0.1 text-1.2.3.0 time-1.8.0.2
+                      utf8-string-1.0.1.1
+orphans: text-1.2.3.0:Data.Text.Lazy text-1.2.3.0:Data.Text
+         binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show network-2.6.3.5:Network.Socket
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+import  -/  base-4.10.1.0:Control.Monad ebed2e8e7444944e0c1d827c6faf40a4
+import  -/  base-4.10.1.0:Data.Functor 2ffda4f936b8f474394d93205750aff3
+import  -/  base-4.10.1.0:Data.Monoid c0108b166e27f747671c7fe4ffb11019
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  bytestring-0.10.8.2:Data.ByteString 0dbe3ec0b37e10f515b8722c5188101f
+import  -/  bytestring-0.10.8.2:Data.ByteString.Internal dcff77f8f80fa9d798036ed295d3d755
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  network-2.6.3.5:Network.Socket a7e32808b5c24dfafb4fefe1c09ee33c
+import  -/  network-2.6.3.5:Network.Socket.ByteString e25f91c55cf6d42af815d80fd43d8b0a
+import  -/  network-2.6.3.5:Network.Socket.Types e3dc7960904a3c325ec0b0ae76c5e560
+import  -/  string-conversions-0.4.0.1:Data.String.Conversions 866b6dd42e010f15034999768530c2d0
+import  -/  Wumpus.Grid bbdbd938802d9288045fba6edfd0fc6d
+  exports: 23052b8f3f37f97d30d99abaaea25a20
+  Bat 3efc83e9940d82b2c3b6926594817438
+  Game af39ec203e664972c0cf69039c6833f1
+  Game 7a3b98b3e8db93656d3ef085d9ff8e27
+  Pit c499b11e7917b58ac2a2dc38a753c3c1
+  Room 3a1b97d7741d338057a65a5d804928c4
+  Room c511e36f8253263dd5b446aa4db9e8ae
+  arrowSemaphore 7a3b98b3e8db93656d3ef085d9ff8e27
+  arrows 7a3b98b3e8db93656d3ef085d9ff8e27
+  bats 7a3b98b3e8db93656d3ef085d9ff8e27
+  grid 7a3b98b3e8db93656d3ef085d9ff8e27
+  pits 7a3b98b3e8db93656d3ef085d9ff8e27
+  player 7a3b98b3e8db93656d3ef085d9ff8e27
+  playerWins 7a3b98b3e8db93656d3ef085d9ff8e27
+  wumpus 7a3b98b3e8db93656d3ef085d9ff8e27
+  wumpusWins 7a3b98b3e8db93656d3ef085d9ff8e27
+82d2eb1881dfea203e2f3fe907b744e1
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Wumpus.Utils.$trModule3
+                   Wumpus.Utils.$trModule1) -}
+0ca58011dddbfc4bfdefe967c5c33eb9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Utils.$trModule2) -}
+d12037502fb19e02702ca09e3baaf1b4
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Wumpus.Utils"#) -}
+0aebe765a905a6928b7563168204c4f0
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Utils.$trModule4) -}
+8afda957d22eb2c658d9b465362b5f45
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("wumpus-0.1.0.0-JL1VcuBzN1B2D5EWBauRGW"#) -}
+23aafe0f12eccd69aa29b526ff10835c
+  $wcheckArrow ::
+    GHC.Types.Bool
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S,1*U><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Bool)
+                   (w :: Network.Socket.Types.Socket)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case ww of wild {
+                   GHC.Types.False -> (# w1, GHC.Tuple.() #)
+                   GHC.Types.True
+                   -> case Wumpus.Utils.checkArrow2 of wild1 { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                      case w of ww1 { Network.Socket.Types.MkSocket ww2 ww3 ww4 ww5 ww6 ->
+                      case ww2
+                             `cast`
+                           (Foreign.C.Types.N:CInt[0]) of ww7 { GHC.Int.I32# ww8 ->
+                      case Network.Socket.$wsendBuf
+                             ww8
+                             (GHC.Prim.plusAddr# dt dt2)
+                             dt3
+                             w1 of ds1 { (#,#) ipv ipv1 ->
+                      case GHC.Prim.touch#
+                             @ 'GHC.Types.LiftedRep
+                             @ GHC.ForeignPtr.ForeignPtrContents
+                             dt1
+                             ipv of s' { DEFAULT ->
+                      (# s', GHC.Tuple.() #) } } } } } }) -}
+0f61708319a85983e327e54fe7f3f960
+  $wcheckBats ::
+    [Wumpus.Grid.Room]
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6,
+     Strictness: <S,1*U><S,U><L,1*U(U)><S,U><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Wumpus.Grid.Room])
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: Network.Socket.Types.Socket)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.List.$w!!
+                        @ Wumpus.Grid.Room
+                        ww
+                        (GHC.Prim.-# ww3 1#) of wild { Wumpus.Grid.Room a b c ->
+                 case a of wild1 { GHC.Types.I# x ->
+                 let {
+                   $j :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                   = case Wumpus.Utils.checkBats2 of wild2 { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                     case w of ww4 { Network.Socket.Types.MkSocket ww5 ww6 ww7 ww8 ww9 ->
+                     case ww5
+                            `cast`
+                          (Foreign.C.Types.N:CInt[0]) of ww10 { GHC.Int.I32# ww11 ->
+                     case Network.Socket.$wsendBuf
+                            ww11
+                            (GHC.Prim.plusAddr# dt dt2)
+                            dt3
+                            w1 of ds1 { (#,#) ipv ipv1 ->
+                     case GHC.Prim.touch#
+                            @ 'GHC.Types.LiftedRep
+                            @ GHC.ForeignPtr.ForeignPtrContents
+                            dt1
+                            ipv of s' { DEFAULT ->
+                     (# s', GHC.Tuple.() #) } } } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# x ww1) of wild2 {
+                   GHC.Types.False
+                   -> case b of wild3 { GHC.Types.I# x1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x1 ww1) of wild4 {
+                        GHC.Types.False
+                        -> case c of wild5 { GHC.Types.I# x2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x2 ww1) of wild6 {
+                             GHC.Types.False
+                             -> case ww2 of wild7 { GHC.Types.I# y ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.==# x y) of wild8 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x1 y) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.==# x2 y) of wild10 {
+                                            GHC.Types.False -> (# w1, GHC.Tuple.() #)
+                                            GHC.Types.True -> $j }
+                                       GHC.Types.True -> $j }
+                                  GHC.Types.True -> $j } }
+                             GHC.Types.True -> $j } }
+                        GHC.Types.True -> $j } }
+                   GHC.Types.True -> $j } } }) -}
+d4d03ca675c4124eaf1a1928b5458160
+  $wcheckPits ::
+    [Wumpus.Grid.Room]
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6,
+     Strictness: <S,1*U><S,U><L,1*U(U)><S,U><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Wumpus.Grid.Room])
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w :: Network.Socket.Types.Socket)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.List.$w!!
+                        @ Wumpus.Grid.Room
+                        ww
+                        (GHC.Prim.-# ww3 1#) of wild { Wumpus.Grid.Room a b c ->
+                 case a of wild1 { GHC.Types.I# x ->
+                 let {
+                   $j :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                   = case Wumpus.Utils.checkPits2 of wild2 { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                     case w of ww4 { Network.Socket.Types.MkSocket ww5 ww6 ww7 ww8 ww9 ->
+                     case ww5
+                            `cast`
+                          (Foreign.C.Types.N:CInt[0]) of ww10 { GHC.Int.I32# ww11 ->
+                     case Network.Socket.$wsendBuf
+                            ww11
+                            (GHC.Prim.plusAddr# dt dt2)
+                            dt3
+                            w1 of ds1 { (#,#) ipv ipv1 ->
+                     case GHC.Prim.touch#
+                            @ 'GHC.Types.LiftedRep
+                            @ GHC.ForeignPtr.ForeignPtrContents
+                            dt1
+                            ipv of s' { DEFAULT ->
+                     (# s', GHC.Tuple.() #) } } } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# x ww1) of wild2 {
+                   GHC.Types.False
+                   -> case b of wild3 { GHC.Types.I# x1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x1 ww1) of wild4 {
+                        GHC.Types.False
+                        -> case c of wild5 { GHC.Types.I# x2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x2 ww1) of wild6 {
+                             GHC.Types.False
+                             -> case ww2 of wild7 { GHC.Types.I# y ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.==# x y) of wild8 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x1 y) of wild9 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.==# x2 y) of wild10 {
+                                            GHC.Types.False -> (# w1, GHC.Tuple.() #)
+                                            GHC.Types.True -> $j }
+                                       GHC.Types.True -> $j }
+                                  GHC.Types.True -> $j } }
+                             GHC.Types.True -> $j } }
+                        GHC.Types.True -> $j } }
+                   GHC.Types.True -> $j } } }) -}
+d8773f691f761b4162a87a0aac2a740d
+  $wcheckPlayer ::
+    [Wumpus.Grid.Room]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5,
+     Strictness: <S,1*U><S,U><S,U><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Wumpus.Grid.Room])
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: Network.Socket.Types.Socket)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.List.$w!!
+                        @ Wumpus.Grid.Room
+                        ww
+                        (GHC.Prim.-# ww1 1#) of wild { Wumpus.Grid.Room a b c ->
+                 case a of wild1 { GHC.Types.I# x ->
+                 let {
+                   $j :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                   = case Wumpus.Utils.checkPlayer2 of wild2 { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                     case w of ww3 { Network.Socket.Types.MkSocket ww4 ww5 ww6 ww7 ww8 ->
+                     case ww4
+                            `cast`
+                          (Foreign.C.Types.N:CInt[0]) of ww9 { GHC.Int.I32# ww10 ->
+                     case Network.Socket.$wsendBuf
+                            ww10
+                            (GHC.Prim.plusAddr# dt dt2)
+                            dt3
+                            w1 of ds1 { (#,#) ipv ipv1 ->
+                     case GHC.Prim.touch#
+                            @ 'GHC.Types.LiftedRep
+                            @ GHC.ForeignPtr.ForeignPtrContents
+                            dt1
+                            ipv of s' { DEFAULT ->
+                     (# s', GHC.Tuple.() #) } } } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# x ww2) of wild2 {
+                   GHC.Types.False
+                   -> case b of wild3 { GHC.Types.I# x1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x1 ww2) of wild4 {
+                        GHC.Types.False
+                        -> case c of wild5 { GHC.Types.I# x2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x2 ww2) of wild6 {
+                             GHC.Types.False -> (# w1, GHC.Tuple.() #) GHC.Types.True -> $j } }
+                        GHC.Types.True -> $j } }
+                   GHC.Types.True -> $j } } }) -}
+e4c13408a4b75be48ea3b4acfd39700b
+  $wcheckWumpus ::
+    [Wumpus.Grid.Room]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5,
+     Strictness: <S,1*U><S,U><S,U><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: [Wumpus.Grid.Room])
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: Network.Socket.Types.Socket)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.List.$w!!
+                        @ Wumpus.Grid.Room
+                        ww
+                        (GHC.Prim.-# ww2 1#) of wild { Wumpus.Grid.Room a b c ->
+                 case a of wild1 { GHC.Types.I# x ->
+                 let {
+                   $j :: (# GHC.Prim.State# GHC.Prim.RealWorld, () #) <join 0>
+                   = case Wumpus.Utils.checkWumpus2 of wild2 { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                     case w of ww3 { Network.Socket.Types.MkSocket ww4 ww5 ww6 ww7 ww8 ->
+                     case ww4
+                            `cast`
+                          (Foreign.C.Types.N:CInt[0]) of ww9 { GHC.Int.I32# ww10 ->
+                     case Network.Socket.$wsendBuf
+                            ww10
+                            (GHC.Prim.plusAddr# dt dt2)
+                            dt3
+                            w1 of ds1 { (#,#) ipv ipv1 ->
+                     case GHC.Prim.touch#
+                            @ 'GHC.Types.LiftedRep
+                            @ GHC.ForeignPtr.ForeignPtrContents
+                            dt1
+                            ipv of s' { DEFAULT ->
+                     (# s', GHC.Tuple.() #) } } } } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# x ww1) of wild2 {
+                   GHC.Types.False
+                   -> case b of wild3 { GHC.Types.I# x1 ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x1 ww1) of wild4 {
+                        GHC.Types.False
+                        -> case c of wild5 { GHC.Types.I# x2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x2 ww1) of wild6 {
+                             GHC.Types.False -> (# w1, GHC.Tuple.() #) GHC.Types.True -> $j } }
+                        GHC.Types.True -> $j } }
+                   GHC.Types.True -> $j } } }) -}
+376e7d1dcfc0dc387afce34e0b7d1df6
+  $wcloseEnough ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><S,U><L,1*U(U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww1) of wild {
+                   GHC.Types.False
+                   -> case ww2 of wild1 { GHC.Types.I# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# ww y) of wild2 {
+                        GHC.Types.False
+                        -> case ww3 of wild3 { GHC.Types.I# y1 ->
+                           GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww y1) }
+                        GHC.Types.True -> GHC.Types.True } }
+                   GHC.Types.True -> GHC.Types.True }) -}
+1ab634643ed3f5ee92e5a40f6d081afd
+  $wpp ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 3, Strictness: <S,U><L,1*U(U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int) ->
+                 case GHC.Show.$wshowSignedInt
+                        0#
+                        ww
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 Data.ByteString.UTF8.fromString
+                   (GHC.Base.++
+                      @ GHC.Types.Char
+                      (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                      (GHC.CString.unpackAppendCString#
+                         Wumpus.Utils.pp1
+                         (case ww1 of ww3 { GHC.Types.I# ww7 ->
+                          case GHC.Show.$wshowSignedInt
+                                 0#
+                                 ww7
+                                 (GHC.Types.[] @ GHC.Types.Char) of ww8 { (#,#) ww9 ww10 ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            (GHC.Types.: @ GHC.Types.Char ww9 ww10)
+                            (GHC.CString.unpackAppendCString#
+                               Wumpus.Utils.pp1
+                               (case ww2 of ww11 { GHC.Types.I# ww12 ->
+                                case GHC.Show.$wshowSignedInt
+                                       0#
+                                       ww12
+                                       (GHC.Types.[] @ GHC.Types.Char) of ww13 { (#,#) ww14 ww15 ->
+                                GHC.Types.: @ GHC.Types.Char ww14 ww15 } })) } }))) }) -}
+54c809f952dc4bce1357e5fe0e6b17b5
+  checkArrow ::
+    Wumpus.Grid.Game -> Network.Socket.Types.Socket -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(LLLLLLSLL),1*U(A,A,A,A,A,A,1*U,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Utils.checkArrow1
+                  `cast`
+                (<Wumpus.Grid.Game>_R
+                 ->_R <Network.Socket.Types.Socket>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f8697ec96ee4da047a810f760bb96b3d
+  checkArrow1 ::
+    Wumpus.Grid.Game
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(LLLLLLSLL),1*U(A,A,A,A,A,A,1*U,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Wumpus.Grid.Game)
+                   (w1 :: Network.Socket.Types.Socket)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 Wumpus.Utils.$wcheckArrow ww7 w1 w2 }) -}
+a9793194badfd03de5116e4e35d75edf
+  checkArrow2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Wumpus.Utils.checkArrow_addr#
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Wumpus.Utils.checkArrow_addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+dd65e2b672254e3560300bafeee35d3a
+  checkArrow_addr# :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Shoot?\n"#) -}
+066e08ea736041f2489dfbee4469feb5
+  checkBats ::
+    Wumpus.Grid.Game -> Network.Socket.Types.Socket -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(SLS(S(S)L)LS(S)LLLL),1*U(1*U,A,1*U(1*U(U),1*U(U)),A,1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Utils.checkBats1
+                  `cast`
+                (<Wumpus.Grid.Game>_R
+                 ->_R <Network.Socket.Types.Socket>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+67646ee638be7e51454873dc5f228e62
+  checkBats1 ::
+    Wumpus.Grid.Game
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(SLS(S(S)L)LS(S)LLLL),1*U(1*U,A,1*U(1*U(U),1*U(U)),A,1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Wumpus.Grid.Game)
+                   (w1 :: Network.Socket.Types.Socket)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 case ww3 of ww10 { Wumpus.Grid.Bat ww11 ww12 ->
+                 case ww11 of ww13 { GHC.Types.I# ww14 ->
+                 case ww5 of ww15 { GHC.Types.I# ww16 ->
+                 Wumpus.Utils.$wcheckBats ww1 ww14 ww12 ww16 w1 w2 } } } }) -}
+b3bc77ac17622bda6f986f91172580ce
+  checkBats2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Wumpus.Utils.checkBats_addr#
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Wumpus.Utils.checkBats_addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+5209ca2ec2ecc2e7f44f24dd6d6061e7
+  checkBats_addr# :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bats nearby\n"#) -}
+786d9d5357256410fbc432cbd5442b49
+  checkPits ::
+    Wumpus.Grid.Game -> Network.Socket.Types.Socket -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(SS(S(S)L)LLS(S)LLLL),1*U(1*U,1*U(1*U(U),1*U(U)),A,A,1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Utils.checkPits1
+                  `cast`
+                (<Wumpus.Grid.Game>_R
+                 ->_R <Network.Socket.Types.Socket>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+dd459167c54e291d0e1a2d2f53d2eafb
+  checkPits1 ::
+    Wumpus.Grid.Game
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(SS(S(S)L)LLS(S)LLLL),1*U(1*U,1*U(1*U(U),1*U(U)),A,A,1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Wumpus.Grid.Game)
+                   (w1 :: Network.Socket.Types.Socket)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 case ww2 of ww10 { Wumpus.Grid.Pit ww11 ww12 ->
+                 case ww11 of ww13 { GHC.Types.I# ww14 ->
+                 case ww5 of ww15 { GHC.Types.I# ww16 ->
+                 Wumpus.Utils.$wcheckPits ww1 ww14 ww12 ww16 w1 w2 } } } }) -}
+efa8453945e23510a7b0b1207423e02d
+  checkPits2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Wumpus.Utils.checkPits_addr#
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Wumpus.Utils.checkPits_addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+542436debff13845cd9e6a1e834d4ea4
+  checkPits_addr# :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("I feel a draft\n"#) -}
+fa124f96e8284e8f4b85703e77b03dc7
+  checkPlayer ::
+    Wumpus.Grid.Game -> Network.Socket.Types.Socket -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(SLLS(S)S(S)LLLL),1*U(1*U,A,A,1*U(U),1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Utils.checkPlayer1
+                  `cast`
+                (<Wumpus.Grid.Game>_R
+                 ->_R <Network.Socket.Types.Socket>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d9afcedadaa570a558ae675d146a21b2
+  checkPlayer1 ::
+    Wumpus.Grid.Game
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(SLLS(S)S(S)LLLL),1*U(1*U,A,A,1*U(U),1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Wumpus.Grid.Game)
+                   (w1 :: Network.Socket.Types.Socket)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 case ww4 of ww10 { GHC.Types.I# ww11 ->
+                 case ww5 of ww12 { GHC.Types.I# ww13 ->
+                 Wumpus.Utils.$wcheckPlayer ww1 ww11 ww13 w1 w2 } } }) -}
+3f1f18abae91deb9d72d79870ce79dae
+  checkPlayer2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Wumpus.Utils.checkPlayer_addr#
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Wumpus.Utils.checkPlayer_addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+c7d8009c427761abd30333db205e694b
+  checkPlayer_addr# :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("I smell a player\n"#) -}
+3f5d4d7d442ec6276ba69ab17c804657
+  checkWumpus ::
+    Wumpus.Grid.Game -> Network.Socket.Types.Socket -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S(SLLS(S)S(S)LLLL),1*U(1*U,A,A,1*U(U),1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Utils.checkWumpus1
+                  `cast`
+                (<Wumpus.Grid.Game>_R
+                 ->_R <Network.Socket.Types.Socket>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+bb403e362e29ac5f063b6c2fa20e020e
+  checkWumpus1 ::
+    Wumpus.Grid.Game
+    -> Network.Socket.Types.Socket
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S(SLLS(S)S(S)LLLL),1*U(1*U,A,A,1*U(U),1*U(U),A,A,A,A)><L,1*U(1*U(U),A,A,A,A)><S,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Wumpus.Grid.Game)
+                   (w1 :: Network.Socket.Types.Socket)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Wumpus.Grid.Game ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 case ww4 of ww10 { GHC.Types.I# ww11 ->
+                 case ww5 of ww12 { GHC.Types.I# ww13 ->
+                 Wumpus.Utils.$wcheckWumpus ww1 ww11 ww13 w1 w2 } } }) -}
+8066166a60bd61d6092080bc76865887
+  checkWumpus2 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case GHC.Prim.newMutVar#
+                        @ GHC.ForeignPtr.Finalizers
+                        @ GHC.Prim.RealWorld
+                        GHC.ForeignPtr.NoFinalizers
+                        GHC.Prim.realWorld# of ds1 { (#,#) ipv ipv1 ->
+                 case {__pkg_ccall bytestring-0.10.8.2 GHC.Prim.Addr#
+                                                       -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                       -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                             GHC.Prim.Word# #)}
+                        Wumpus.Utils.checkWumpus_addr#
+                        ipv of wild { (#,#) ds ds2 ->
+                 Data.ByteString.Internal.PS
+                   Wumpus.Utils.checkWumpus_addr#
+                   (GHC.ForeignPtr.PlainForeignPtr ipv1)
+                   0#
+                   (GHC.Prim.word2Int# ds2) } }) -}
+542c1f7803cd7b6505a02c67f50b1431
+  checkWumpus_addr# :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("I smell a wumpus\n"#) -}
+e791407ed03a43f5da77e4dc4e0e7f66
+  closeEnough :: GHC.Types.Int -> Wumpus.Grid.Room -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(U)><S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Wumpus.Grid.Room) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Wumpus.Grid.Room ww3 ww4 ww5 ->
+                 case ww3 of ww6 { GHC.Types.I# ww7 ->
+                 Wumpus.Utils.$wcloseEnough ww1 ww7 ww4 ww5 } } }) -}
+0cc53ff16fc2b1e3224a8af96b5125af
+  pp :: Wumpus.Grid.Room -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <S(S(S)LL),1*U(1*U(U),1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Wumpus.Grid.Room) ->
+                 case w of ww { Wumpus.Grid.Room ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.I# ww5 ->
+                 Wumpus.Utils.$wpp ww5 ww2 ww3 } }) -}
+829aecb454ec613cc863c12bf860c412
+  pp1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (", "#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

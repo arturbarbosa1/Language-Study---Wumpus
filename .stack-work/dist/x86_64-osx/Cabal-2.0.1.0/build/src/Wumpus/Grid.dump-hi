@@ -1,0 +1,1104 @@
+
+==================== FINAL INTERFACE ====================
+2018-05-10 00:09:41.687428 UTC
+
+interface wumpus-0.1.0.0-JL1VcuBzN1B2D5EWBauRGW:Wumpus.Grid 8022
+  interface hash: 17d31feb2fc068b1532e0576c8ab42a3
+  ABI hash: bbdbd938802d9288045fba6edfd0fc6d
+  export-list hash: 23052b8f3f37f97d30d99abaaea25a20
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ffafd66a2d0d4f68059d8cbc89dbbc22
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Wumpus.Grid.dodecahedron
+  Wumpus.Grid.generateGame
+  Wumpus.Grid.Bat{Wumpus.Grid.Bat}
+  Wumpus.Grid.Game{Wumpus.Grid.Game arrowSemaphore arrows bats grid pits player playerWins wumpus wumpusWins}
+  Wumpus.Grid.Pit{Wumpus.Grid.Pit}
+  Wumpus.Grid.Player
+  Wumpus.Grid.Room{Wumpus.Grid.Room}
+  Wumpus.Grid.Wumpus
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0* deepseq-1.4.3.0
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 random-1.1* time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  random-1.1:System.Random c9dfbade5c0e5bc4ae42c058f948952b
+13090877f02f23f69396288a38343e18
+  $fEqBat :: GHC.Classes.Eq Wumpus.Grid.Bat
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Wumpus.Grid.Bat
+                  Wumpus.Grid.$fEqBat_$c==
+                  Wumpus.Grid.$fEqBat_$c/= -}
+13090877f02f23f69396288a38343e18
+  $fEqBat_$c/= ::
+    Wumpus.Grid.Bat -> Wumpus.Grid.Bat -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Wumpus.Grid.Bat) (w1 :: Wumpus.Grid.Bat) ->
+                 case w of ww { Wumpus.Grid.Bat ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Wumpus.Grid.Bat ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Wumpus.Grid.$w$c/= ww4 ww2 ww9 ww7 } } } }) -}
+13090877f02f23f69396288a38343e18
+  $fEqBat_$c== ::
+    Wumpus.Grid.Bat -> Wumpus.Grid.Bat -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Wumpus.Grid.Bat) (w1 :: Wumpus.Grid.Bat) ->
+                 case w of ww { Wumpus.Grid.Bat ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Wumpus.Grid.Bat ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Wumpus.Grid.$w$c== ww4 ww2 ww9 ww7 } } } }) -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fEqPit :: GHC.Classes.Eq Wumpus.Grid.Pit
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Wumpus.Grid.Pit
+                  Wumpus.Grid.$fEqPit_$c==
+                  Wumpus.Grid.$fEqPit_$c/= -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fEqPit_$c/= ::
+    Wumpus.Grid.Pit -> Wumpus.Grid.Pit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Wumpus.Grid.Pit) (w1 :: Wumpus.Grid.Pit) ->
+                 case w of ww { Wumpus.Grid.Pit ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Wumpus.Grid.Pit ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Wumpus.Grid.$w$c/=1 ww4 ww2 ww9 ww7 } } } }) -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fEqPit_$c== ::
+    Wumpus.Grid.Pit -> Wumpus.Grid.Pit -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Wumpus.Grid.Pit) (w1 :: Wumpus.Grid.Pit) ->
+                 case w of ww { Wumpus.Grid.Pit ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { Wumpus.Grid.Pit ww6 ww7 ->
+                 case ww6 of ww8 { GHC.Types.I# ww9 ->
+                 Wumpus.Grid.$w$c==1 ww4 ww2 ww9 ww7 } } } }) -}
+13090877f02f23f69396288a38343e18
+  $fShowBat :: GHC.Show.Show Wumpus.Grid.Bat
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Wumpus.Grid.Bat
+                  Wumpus.Grid.$fShowBat_$cshowsPrec
+                  Wumpus.Grid.$fShowBat_$cshow
+                  Wumpus.Grid.$fShowBat_$cshowList -}
+13090877f02f23f69396288a38343e18
+  $fShowBat1 :: Wumpus.Grid.Bat -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U(U),1*U(U))><L,U>,
+     Unfolding: (\ (w :: Wumpus.Grid.Bat) (w1 :: GHC.Base.String) ->
+                 case w of ww { Wumpus.Grid.Bat ww1 ww2 ->
+                 Wumpus.Grid.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+52ba4b1eb5adea471f536c7072e0c064
+  $fShowBat2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Wumpus.Grid.$fShowBat3) -}
+8cd83034ef78f0aa85f437a2e6e1bf64
+  $fShowBat3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bat "#) -}
+13090877f02f23f69396288a38343e18
+  $fShowBat_$cshow :: Wumpus.Grid.Bat -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U(U))>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Wumpus.Grid.Bat) ->
+                 case w of ww { Wumpus.Grid.Bat ww1 ww2 ->
+                 Wumpus.Grid.$w$cshow ww1 ww2 }) -}
+13090877f02f23f69396288a38343e18
+  $fShowBat_$cshowList :: [Wumpus.Grid.Bat] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Wumpus.Grid.Bat
+                   Wumpus.Grid.$fShowBat1) -}
+13090877f02f23f69396288a38343e18
+  $fShowBat_$cshowsPrec ::
+    GHC.Types.Int -> Wumpus.Grid.Bat -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Wumpus.Grid.Bat)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Wumpus.Grid.Bat ww3 ww4 ->
+                 Wumpus.Grid.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fShowPit :: GHC.Show.Show Wumpus.Grid.Pit
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Wumpus.Grid.Pit
+                  Wumpus.Grid.$fShowPit_$cshowsPrec
+                  Wumpus.Grid.$fShowPit_$cshow
+                  Wumpus.Grid.$fShowPit_$cshowList -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fShowPit1 :: Wumpus.Grid.Pit -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(1*U(U),1*U(U))><L,U>,
+     Unfolding: (\ (w :: Wumpus.Grid.Pit) (w1 :: GHC.Base.String) ->
+                 case w of ww { Wumpus.Grid.Pit ww1 ww2 ->
+                 Wumpus.Grid.$w$cshowsPrec1 0# ww1 ww2 w1 }) -}
+224ba367d0cde36f7fbe74c9a9367186
+  $fShowPit2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Wumpus.Grid.$fShowPit3) -}
+340a682d78138e57712cb5d4f51ccbbe
+  $fShowPit3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pit "#) -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fShowPit_$cshow :: Wumpus.Grid.Pit -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U(U))>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Wumpus.Grid.Pit) ->
+                 case w of ww { Wumpus.Grid.Pit ww1 ww2 ->
+                 Wumpus.Grid.$w$cshow1 ww1 ww2 }) -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fShowPit_$cshowList :: [Wumpus.Grid.Pit] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Wumpus.Grid.Pit
+                   Wumpus.Grid.$fShowPit1) -}
+21222c21d92c5e38d72ffeff58545b1e
+  $fShowPit_$cshowsPrec ::
+    GHC.Types.Int -> Wumpus.Grid.Pit -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Wumpus.Grid.Pit)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Wumpus.Grid.Pit ww3 ww4 ->
+                 Wumpus.Grid.$w$cshowsPrec1 ww1 ww3 ww4 w2 } }) -}
+c5678fc69e0a165286ca8fb41f2cd011
+  $tc'Bat :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2599971632579283293##
+                   13244690720049359595##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tc'Bat2
+                   0#
+                   Wumpus.Grid.$tc'Bat1) -}
+1724f9ec9babe5fffc1840139b01eee5
+  $tc'Bat1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+1cb92389251cf82b8597e7cb53090a7f
+  $tc'Bat2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tc'Bat3) -}
+4014907adbb132b3857f5207402e7927
+  $tc'Bat3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Bat"#) -}
+440722911673ff8c1d2b73c6d3b9bb74
+  $tc'Game :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13430192403559060497##
+                   11238662657805939751##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tc'Game2
+                   0#
+                   Wumpus.Grid.$tc'Game1) -}
+a7ac0c07633554bc8ba373f1c4206281
+  $tc'Game1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+bc3a8bab879bf338afbd5dd37f801f69
+  $tc'Game2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tc'Game3) -}
+d340bc8eef1f1ac0f5cb5c3d14066f1b
+  $tc'Game3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Game"#) -}
+1d857a864a765439c9490810698694b5
+  $tc'Pit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1774179204994337817##
+                   3990258214617380143##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tc'Pit2
+                   0#
+                   Wumpus.Grid.$tc'Pit1) -}
+8892db2cb57e9fb89378462a67a54ebf
+  $tc'Pit1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+f81f037faab780a801b8640a1cd23b15
+  $tc'Pit2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tc'Pit3) -}
+d202634d05a0bb59d08793286577aaea
+  $tc'Pit3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Pit"#) -}
+e58612d9697104f72d681347866f233a
+  $tc'Room :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1690807229095817853##
+                   14283615623538014547##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tc'Room2
+                   0#
+                   Wumpus.Grid.$tc'Room1) -}
+1e0f61c8f0b073eed3e88dceb8276afa
+  $tc'Room1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+08595a07e796d35b439169c63203f865
+  $tc'Room2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tc'Room3) -}
+254a887cd4b90b0feb09809ad5c992e6
+  $tc'Room3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Room"#) -}
+bc1aeccb5c67ef001830c056bb820d9b
+  $tcBat :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12454972572320401198##
+                   1781442199049267455##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tcBat1
+                   0#
+                   GHC.Types.krep$*) -}
+28bd7baf1301a0621b4c95966bffc5dd
+  $tcBat1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tcBat2) -}
+49114348c6565316f190ddbb5d0a9dbf
+  $tcBat2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Bat"#) -}
+c545ff1ace18aa2bbab629fb5fb7b0fd
+  $tcGame :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16635434765049926032##
+                   6445883814233539851##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tcGame1
+                   0#
+                   GHC.Types.krep$*) -}
+9d797ab6e8e6ba83f9caab4f01f77f31
+  $tcGame1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tcGame2) -}
+2e4c5936b3e2a77a18a8d458822388fc
+  $tcGame2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Game"#) -}
+c71cf709a2cef19813f7d2c27a9cf9d9
+  $tcPit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11312539162481617680##
+                   4310579260621599701##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tcPit1
+                   0#
+                   GHC.Types.krep$*) -}
+47a498e3dbb3c6dbe3e0dd0c1799de04
+  $tcPit1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tcPit2) -}
+acec28fdc4118ffcd83e7c738dfbd44b
+  $tcPit2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pit"#) -}
+035a544cf57ecb0933dbec9e0e99b3d9
+  $tcRoom :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   117890855880183748##
+                   10864811350259185324##
+                   Wumpus.Grid.$trModule
+                   Wumpus.Grid.$tcRoom1
+                   0#
+                   GHC.Types.krep$*) -}
+8072741d626270e058deae9e08bc7ed4
+  $tcRoom1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$tcRoom2) -}
+fccc232d78e93fa24dbfc99b9065e8e6
+  $tcRoom2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Room"#) -}
+440cab76721cee9dbcc4d21bf1ff02a0
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Wumpus.Grid.$trModule3
+                   Wumpus.Grid.$trModule1) -}
+c96dd4cbb8818683ce6bbbb35d72ada4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$trModule2) -}
+e8a384207fabd0a0afc024197fddfcda
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Wumpus.Grid"#) -}
+f3af048b136a61002567d9c1772810ff
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Wumpus.Grid.$trModule4) -}
+bac4cf32d2490fc4ea2be92586b81d87
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("wumpus-0.1.0.0-JL1VcuBzN1B2D5EWBauRGW"#) -}
+7187539284fee3411bc83bfb1e40b323
+  $w$c/= ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      case ww3 of wild2 { GHC.Types.I# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+08b5d81d3ea85c55132cc17ecd1e7179
+  $w$c/=1 ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      case ww3 of wild2 { GHC.Types.I# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+e71914e0ea903dd38bf7a01cca911f87
+  $w$c== ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.eqInt ww1 ww3 }) -}
+302b37c9b02ff4987100691c91a6de18
+  $w$c==1 ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,U><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww2) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.eqInt ww1 ww3 }) -}
+d85d785e135fa5aaca7d1470f8f7dc84
+  $w$cshow :: GHC.Types.Int -> GHC.Types.Int -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int) (ww1 :: GHC.Types.Int) ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   Wumpus.Grid.$fShowBat2
+                   (case ww of ww2 { GHC.Types.I# ww3 ->
+                    case GHC.Show.$wshowSignedInt
+                           11#
+                           ww3
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.showSpace1
+                              (case ww1 of ww5 { GHC.Types.I# ww6 ->
+                               case GHC.Show.$wshowSignedInt
+                                      11#
+                                      ww6
+                                      (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww7 ww8 ->
+                               GHC.Types.:
+                                 @ GHC.Types.Char
+                                 ww7
+                                 ww8 } })) of ww4 { (#,#) ww5 ww6 ->
+                    GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) -}
+f9502ebc411da2f9b834dc47d6a46526
+  $w$cshow1 :: GHC.Types.Int -> GHC.Types.Int -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int) (ww1 :: GHC.Types.Int) ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   Wumpus.Grid.$fShowPit2
+                   (case ww of ww2 { GHC.Types.I# ww3 ->
+                    case GHC.Show.$wshowSignedInt
+                           11#
+                           ww3
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.showSpace1
+                              (case ww1 of ww5 { GHC.Types.I# ww6 ->
+                               case GHC.Show.$wshowSignedInt
+                                      11#
+                                      ww6
+                                      (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww7 ww8 ->
+                               GHC.Types.:
+                                 @ GHC.Types.Char
+                                 ww7
+                                 ww8 } })) of ww4 { (#,#) ww5 ww6 ->
+                    GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) -}
+0e3cb526ed84841e6e1ae09e2689f5e2
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U(U)><L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     case ww1 of ww3 { GHC.Types.I# ww4 ->
+                     case GHC.Show.$wshowSignedInt
+                            11#
+                            ww4
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.showSpace1
+                               (case ww2 of ww5 { GHC.Types.I# ww6 ->
+                                case GHC.Show.$wshowSignedInt 11# ww6 x of ww7 { (#,#) ww8 ww9 ->
+                                GHC.Types.:
+                                  @ GHC.Types.Char
+                                  ww8
+                                  ww9 } })) of ww5 { (#,#) ww6 ww7 ->
+                     GHC.Types.: @ GHC.Types.Char ww6 ww7 } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Wumpus.Grid.$fShowBat2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Wumpus.Grid.$fShowBat2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
+0987f2bab32544439916ed510c2806c8
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U(U)><L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Types.Int)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     case ww1 of ww3 { GHC.Types.I# ww4 ->
+                     case GHC.Show.$wshowSignedInt
+                            11#
+                            ww4
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.showSpace1
+                               (case ww2 of ww5 { GHC.Types.I# ww6 ->
+                                case GHC.Show.$wshowSignedInt 11# ww6 x of ww7 { (#,#) ww8 ww9 ->
+                                GHC.Types.:
+                                  @ GHC.Types.Char
+                                  ww8
+                                  ww9 } })) of ww5 { (#,#) ww6 ww7 ->
+                     GHC.Types.: @ GHC.Types.Char ww6 ww7 } }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Wumpus.Grid.$fShowPit2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Wumpus.Grid.$fShowPit2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
+13090877f02f23f69396288a38343e18
+  data Bat = Bat GHC.Types.Int GHC.Types.Int
+7a3b98b3e8db93656d3ef085d9ff8e27
+  data Game
+    = Game {grid :: [Wumpus.Grid.Room],
+            pits :: Wumpus.Grid.Pit,
+            bats :: Wumpus.Grid.Bat,
+            wumpus :: Wumpus.Grid.Wumpus,
+            player :: Wumpus.Grid.Player,
+            arrows :: GHC.Types.Int,
+            arrowSemaphore :: GHC.Types.Bool,
+            playerWins :: GHC.Types.Bool,
+            wumpusWins :: GHC.Types.Bool}
+21222c21d92c5e38d72ffeff58545b1e
+  data Pit = Pit GHC.Types.Int GHC.Types.Int
+92f8d7d5aa4fb082aeb89fe3b9617d6f
+  type Player = GHC.Types.Int
+c511e36f8253263dd5b446aa4db9e8ae
+  data Room = Room GHC.Types.Int GHC.Types.Int GHC.Types.Int
+806e17ce733ad55a84885dc281ff3971
+  type Wumpus = GHC.Types.Int
+7a3b98b3e8db93656d3ef085d9ff8e27
+  arrowSemaphore :: Wumpus.Grid.Game -> GHC.Types.Bool
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLSLL),1*U(A,A,A,A,A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds7 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  arrows :: Wumpus.Grid.Game -> GHC.Types.Int
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLSLLL),1*U(A,A,A,A,A,1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds6 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  bats :: Wumpus.Grid.Game -> Wumpus.Grid.Bat
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLLLLL),1*U(A,A,1*U(U,U),A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds3 }) -}
+636196484c62958417d4dc25e52624fb
+  dodecahedron :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron59
+                   Wumpus.Grid.dodecahedron1) -}
+6c3d132795164853aad17321b4536280
+  dodecahedron1 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron58
+                   Wumpus.Grid.dodecahedron2) -}
+7e92b41d788cfd47a214ceeb79da295b
+  dodecahedron10 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron44
+                   Wumpus.Grid.dodecahedron11) -}
+20a88557b850a350d5fa8f7009d77044
+  dodecahedron11 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron42
+                   Wumpus.Grid.dodecahedron12) -}
+2f28f5a35b1c12b049bbaf21e27fc0cb
+  dodecahedron12 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron40
+                   Wumpus.Grid.dodecahedron13) -}
+719d37b12d5721dc4edd2efaabd51b8b
+  dodecahedron13 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron38
+                   Wumpus.Grid.dodecahedron14) -}
+004138c2b2ca754a81dd61a3a28bd2fb
+  dodecahedron14 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron35
+                   Wumpus.Grid.dodecahedron15) -}
+5f4dc0dea890afb0a833e0c889f73f4c
+  dodecahedron15 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron33
+                   Wumpus.Grid.dodecahedron16) -}
+6959e4dbe6b900d278a6c135505f2d01
+  dodecahedron16 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron31
+                   Wumpus.Grid.dodecahedron17) -}
+19f54b330220df0dcde0efb192dca997
+  dodecahedron17 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron28
+                   Wumpus.Grid.dodecahedron18) -}
+d5377a12bc92f3fd81eacc5e4418d0e5
+  dodecahedron18 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron24
+                   Wumpus.Grid.dodecahedron19) -}
+c4924aa0df11239f8a7e4d62e1a48862
+  dodecahedron19 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron20
+                   (GHC.Types.[] @ Wumpus.Grid.Room)) -}
+a5773d4101d4716af6b5f64889e265cb
+  dodecahedron2 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron57
+                   Wumpus.Grid.dodecahedron3) -}
+1dae4cc60e8c9bd69834374013281156
+  dodecahedron20 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron23
+                   Wumpus.Grid.dodecahedron22
+                   Wumpus.Grid.dodecahedron21) -}
+7741b2d4b37f35835b7efae7152eda50
+  dodecahedron21 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 16#) -}
+ed9dc7fedb42c678c24810dc4d88868a
+  dodecahedron22 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 19#) -}
+1937779863bdee3f541520f372744ec8
+  dodecahedron23 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 14#) -}
+5a6dd4e6f3d474f166b23d61490b24e7
+  dodecahedron24 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron27
+                   Wumpus.Grid.dodecahedron26
+                   Wumpus.Grid.dodecahedron25) -}
+fafcfd967018359c8b3be0a7e2c81a18
+  dodecahedron25 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 20#) -}
+9c1b406d06d69576dbb993891022a0dd
+  dodecahedron26 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 18#) -}
+a7099e0690bbe2526e55f7ff7c9bbce9
+  dodecahedron27 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 15#) -}
+13fabae133fde650ca4326e0e0098049
+  dodecahedron28 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron30
+                   Wumpus.Grid.dodecahedron29
+                   Wumpus.Grid.dodecahedron22) -}
+0ac8420a70f9c0ec8e433b2bf99f665e
+  dodecahedron29 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 17#) -}
+68388727087c8089c23c6f0d983a2a68
+  dodecahedron3 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron55
+                   Wumpus.Grid.dodecahedron4) -}
+06d7c9592bdea68467be1a8bf81c04e2
+  dodecahedron30 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+a439c383d41ec58862e08622375b4b76
+  dodecahedron31 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron32
+                   Wumpus.Grid.dodecahedron21
+                   Wumpus.Grid.dodecahedron26) -}
+f271745fe6139e938b582e1ad6b917bb
+  dodecahedron32 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 9#) -}
+25b942ce438f698b9ee09206706ad79e
+  dodecahedron33 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron34
+                   Wumpus.Grid.dodecahedron29
+                   Wumpus.Grid.dodecahedron25) -}
+762003f95c7df10fac931381c28e1f38
+  dodecahedron34 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+2c46e72e36c8ffb04d5775e5a9c4cc9c
+  dodecahedron35 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron37
+                   Wumpus.Grid.dodecahedron36
+                   Wumpus.Grid.dodecahedron22) -}
+1db910e881fd181ddb3796c88a845e7d
+  dodecahedron36 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 13#) -}
+878219390bc278d4ed17b4b011fd3ed4
+  dodecahedron37 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 12#) -}
+0ac9dab0639c0d7711a5c72fcb994a14
+  dodecahedron38 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron39
+                   Wumpus.Grid.dodecahedron36
+                   Wumpus.Grid.dodecahedron25) -}
+9b3cf000c20be1d2114a5dd4fa61b537
+  dodecahedron39 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+54be16836bd0d9c42268421f4527e1e3
+  dodecahedron4 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron54
+                   Wumpus.Grid.dodecahedron5) -}
+4ce6f0caac6369627cf301eb55ce81cf
+  dodecahedron40 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron41
+                   Wumpus.Grid.dodecahedron23
+                   Wumpus.Grid.dodecahedron27) -}
+369dc4d66f9901f14cd0c8ad11994060
+  dodecahedron41 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 6#) -}
+e2212d6960fd45ac97f5508b28891305
+  dodecahedron42 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron43
+                   Wumpus.Grid.dodecahedron30
+                   Wumpus.Grid.dodecahedron27) -}
+b204d37c3aadcaa8082a34d6880d7ab3
+  dodecahedron43 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 7#) -}
+8227cc8e3b44363ae04c5ff0b5b1d14f
+  dodecahedron44 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron45
+                   Wumpus.Grid.dodecahedron37
+                   Wumpus.Grid.dodecahedron26) -}
+3a4f733b76ad901029215301ee4ca32c
+  dodecahedron45 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
+28d523eab251255dd3ba97700eae81a2
+  dodecahedron46 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron47
+                   Wumpus.Grid.dodecahedron39
+                   Wumpus.Grid.dodecahedron21) -}
+322fb727d31a86072afbdacb90e7cda5
+  dodecahedron47 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+b9727be95925f42e5d9c177a54cff4db
+  dodecahedron48 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron47
+                   Wumpus.Grid.dodecahedron45
+                   Wumpus.Grid.dodecahedron29) -}
+33c77f792bc01fa1985f96136d3be5e6
+  dodecahedron49 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron50
+                   Wumpus.Grid.dodecahedron32
+                   Wumpus.Grid.dodecahedron30) -}
+3a63d14ed1ba3c6ea65fb882e2e31cb7
+  dodecahedron5 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron52
+                   Wumpus.Grid.dodecahedron6) -}
+869add06ee5d95bbf2a59bb212b412a5
+  dodecahedron50 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+c84376dfb3cd3c8090fc7b96a0c09863
+  dodecahedron51 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron50
+                   Wumpus.Grid.dodecahedron41
+                   Wumpus.Grid.dodecahedron37) -}
+80dd49f3b4f1cc9ef05529840aad751d
+  dodecahedron52 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron53
+                   Wumpus.Grid.dodecahedron43
+                   Wumpus.Grid.dodecahedron36) -}
+89d03da0ae902ffd553b3c1aa79eaaa6
+  dodecahedron53 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+6d2603873c245e7464ef3e859875a5c0
+  dodecahedron54 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron53
+                   Wumpus.Grid.dodecahedron34
+                   Wumpus.Grid.dodecahedron23) -}
+cde38ec0e09a66ef6f3ad860d8058e33
+  dodecahedron55 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron56
+                   Wumpus.Grid.dodecahedron39
+                   Wumpus.Grid.dodecahedron41) -}
+2b29a991e25b36a8b5e0d79432b6f276
+  dodecahedron56 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+ba3fdcde74d0ab3488101366ad70a35c
+  dodecahedron57 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron56
+                   Wumpus.Grid.dodecahedron32
+                   Wumpus.Grid.dodecahedron43) -}
+baedd2a8c0f328072b4dfe598faf8f50
+  dodecahedron58 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron56
+                   Wumpus.Grid.dodecahedron32
+                   Wumpus.Grid.dodecahedron34) -}
+787ede2bf5c0c2a8f300cad1c5a4b939
+  dodecahedron59 :: Wumpus.Grid.Room
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron47
+                   Wumpus.Grid.dodecahedron50
+                   Wumpus.Grid.dodecahedron53) -}
+f980aba6b6dafd0ff05d70351a7d3b51
+  dodecahedron6 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron51
+                   Wumpus.Grid.dodecahedron7) -}
+f0cfe79a70e03db637c1fc7f2b5bf513
+  dodecahedron7 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron49
+                   Wumpus.Grid.dodecahedron8) -}
+7d572566da9c4f3774f19a57bcb80bc5
+  dodecahedron8 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron48
+                   Wumpus.Grid.dodecahedron9) -}
+a162d8fd83ebb8bb062298d16104d2ff
+  dodecahedron9 :: [Wumpus.Grid.Room]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Wumpus.Grid.Room
+                   Wumpus.Grid.dodecahedron46
+                   Wumpus.Grid.dodecahedron10) -}
+4e204976a619fa7918611a74f8154dc8
+  generateGame :: GHC.Types.IO Wumpus.Grid.Game
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Wumpus.Grid.generateGame1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Wumpus.Grid.Game>_R)) -}
+178e92771853c2fdfd0746bb579136ba
+  generateGame1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Wumpus.Grid.Game #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Random.$fRandomInt3
+                        Wumpus.Grid.generateGame2
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case System.Random.$fRandomInt3
+                        Wumpus.Grid.generateGame2
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case System.Random.$fRandomInt3
+                        Wumpus.Grid.generateGame2
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case System.Random.$fRandomInt3
+                        Wumpus.Grid.generateGame2
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case System.Random.$fRandomInt3
+                        Wumpus.Grid.generateGame2
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 (# ipv8,
+                    Wumpus.Grid.Game
+                      Wumpus.Grid.dodecahedron
+                      (Wumpus.Grid.Pit ipv5 ipv7)
+                      (Wumpus.Grid.Bat ipv1 ipv3)
+                      ipv9
+                      Wumpus.Grid.dodecahedron56
+                      Wumpus.Grid.dodecahedron39
+                      GHC.Types.False
+                      GHC.Types.False
+                      GHC.Types.False #) } } } } }) -}
+45821cb5a4b6fcc016be2575b20ff1d1
+  generateGame2 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Wumpus.Grid.dodecahedron47,
+                  Wumpus.Grid.dodecahedron25)) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  grid :: Wumpus.Grid.Game -> [Wumpus.Grid.Room]
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLL),1*U(1*U,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds1 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  pits :: Wumpus.Grid.Game -> Wumpus.Grid.Pit
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLLLL),1*U(A,1*U(U,U),A,A,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds2 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  player :: Wumpus.Grid.Game -> Wumpus.Grid.Player
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLLLL),1*U(A,A,A,A,1*U(U),A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds5 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  playerWins :: Wumpus.Grid.Game -> GHC.Types.Bool
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLSL),1*U(A,A,A,A,A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds8 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  wumpus :: Wumpus.Grid.Game -> Wumpus.Grid.Wumpus
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLLLLL),1*U(A,A,A,1*U(U),A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds4 }) -}
+7a3b98b3e8db93656d3ef085d9ff8e27
+  wumpusWins :: Wumpus.Grid.Game -> GHC.Types.Bool
+  RecSel Left Wumpus.Grid.Game
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLS),1*U(A,A,A,A,A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Wumpus.Grid.Game) ->
+                 case ds of wild { Wumpus.Grid.Game ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds9 }) -}
+instance [safe] GHC.Classes.Eq [Wumpus.Grid.Bat]
+  = Wumpus.Grid.$fEqBat
+instance [safe] GHC.Classes.Eq [Wumpus.Grid.Pit]
+  = Wumpus.Grid.$fEqPit
+instance [safe] GHC.Show.Show [Wumpus.Grid.Bat]
+  = Wumpus.Grid.$fShowBat
+instance [safe] GHC.Show.Show [Wumpus.Grid.Pit]
+  = Wumpus.Grid.$fShowPit
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
