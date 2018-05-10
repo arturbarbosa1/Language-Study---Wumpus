@@ -36,9 +36,9 @@ There are two possible actions
 Hunter                        
 
 >Warning messages: Give you information about the contents of adjacent rooms.
->Wumpus: "I smell a wumpus"
->Bat: "Bats nearby"
->Pit: "I feel a draft"
+>>Wumpus: "I smell a wumpus"
+>>Bat: "Bats nearby"
+>>Pit: "I feel a draft"
 
 Wumpus
 
