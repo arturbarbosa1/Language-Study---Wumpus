@@ -54,4 +54,4 @@ GAMEPLAY
 
 Hunter: 
 
-![alt text](https://raw.githubusercontent.com/username/Wumpus/edit/master/huntergameplay.png)
+![alt text](https://imgur.com/a/No2rzPf)
