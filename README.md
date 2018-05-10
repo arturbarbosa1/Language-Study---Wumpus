@@ -50,8 +50,3 @@ Features
 >Wumpus has just one action - move in some direction to an adjacent room
 
 
-GAMEPLAY 
-
-Hunter: 
-
-![alt text](<blockquote class="imgur-embed-pub" lang="en" data-id="a/No2rzPf"><a href="//imgur.com/No2rzPf"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
