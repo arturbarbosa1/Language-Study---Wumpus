@@ -53,5 +53,5 @@ Features
 GAMEPLAY 
 
 Hunter: 
-![alt text](https://raw.githubusercontent.com/arturbarbosa1/Wumpus/Screen Shot 2018-05-09 at 11.06.07 PM.png)
+![alt text](https://raw.githubusercontent.com/arturbarbosa1/Wumpus/huntergameplay.png)
 
